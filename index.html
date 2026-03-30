@@ -2,78 +2,38 @@
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
-    <title>Đèn Kéo Quân - T.Nguyên</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>T.Nguyên - Portfolio & Đèn Kéo Quân</title>
     <link rel="stylesheet" href="style.css">
-    <style>
-        .container-3d {
-            perspective: 1000px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 400px;
-            margin-top: 50px;
-        }
-        .den-keo-quan {
-            width: 200px;
-            height: 250px;
-            position: relative;
-            transform-style: preserve-3d;
-            animation: quayVong 10s linear infinite;
-        }
-        /* Dừng quay khi rê chuột vào */
-        .den-keo-quan:hover {
-            animation-play-state: paused;
-        }
-        .mat-den {
-            position: absolute;
-            width: 200px;
-            height: 250px;
-            border: 2px solid #e74c3c;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background: rgba(255, 255, 255, 0.9);
-            box-shadow: 0 0 10px rgba(0,0,0,0.2);
-        }
-        .mat-den img {
-            width: 90%;
-            height: 90%;
-            object-fit: cover;
-        }
-        /* Sắp xếp 6 mặt thành vòng tròn (6 mặt = 360/6 = 60 độ mỗi mặt) */
-        .mat-1 { transform: rotateY(0deg) translateZ(200px); }
-        .mat-2 { transform: rotateY(60deg) translateZ(200px); }
-        .mat-3 { transform: rotateY(120deg) translateZ(200px); }
-        .mat-4 { transform: rotateY(180deg) translateZ(200px); }
-        .mat-5 { transform: rotateY(240deg) translateZ(200px); }
-        .mat-6 { transform: rotateY(300deg) translateZ(200px); }
-
-        @keyframes quayVong {
-            from { transform: rotateY(0deg); }
-            to { transform: rotateY(360deg); }
-        }
-    </style>
 </head>
 <body>
     <nav>
         <a href="index.html">Trang chủ</a>
-        <a href="den-keo-quan.html">Đèn Kéo Quân</a>
+        <a href="about.html">Giới thiệu</a>
+        <a href="contact.html">Liên hệ</a>
+        <a href="den-keo-quan.html" style="color: #f1c40f; font-weight: bold;">Đèn Kéo Quân (BT32)</a>
     </nav>
 
     <header>
-        <h1>Hiệu ứng Đèn Kéo Quân 3D</h1>
-        <p>Rê chuột vào hình để dừng đèn lại</p>
+        <h1>Xin chào! Mình là T.Nguyên</h1>
+        <p>Sinh viên Du lịch & Web Developer tương lai</p>
     </header>
 
-    <div class="container-3d">
-        <div class="den-keo-quan" id="denQuan">
-            <div class="mat-den mat-1"><img src="https://picsum.photos/200/250?random=1" alt="1"></div>
-            <div class="mat-den mat-2"><img src="https://picsum.photos/200/250?random=2" alt="2"></div>
-            <div class="mat-den mat-3"><img src="https://picsum.photos/200/250?random=3" alt="3"></div>
-            <div class="mat-den mat-4"><img src="https://picsum.photos/200/250?random=4" alt="4"></div>
-            <div class="mat-den mat-5"><img src="https://picsum.photos/200/250?random=5" alt="5"></div>
-            <div class="mat-den mat-6"><img src="https://picsum.photos/200/250?random=6" alt="6"></div>
+    <section>
+        <h2>Bài tập Kiểm tra giữa kỳ</h2>
+        <div class="project">
+            <h3>Hiệu ứng Đèn Kéo Quân 3D</h3>
+            <p>Sử dụng CSS 3D Transform và Javascript để tạo đèn quay vòng tròn.</p>
+            <a href="den-keo-quan.html" style="color: #3498db; text-decoration: none; font-weight: bold;">[Bấm vào đây để xem Đèn quay]</a>
         </div>
-    </div>
+
+        <h2>Dự án cá nhân</h2>
+        <div class="project">
+            <h3>Trung Nguyen Store</h3>
+            <p>Website thực hành quản lý cửa hàng công nghệ tại Bạc Liêu.</p>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
 </body>
 </html>
