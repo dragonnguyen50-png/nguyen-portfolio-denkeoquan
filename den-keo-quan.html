@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Đèn Kéo Quân 3D - T.Nguyên</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .container-3d {
+            perspective: 1000px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 450px;
+            background: #1a1a1a;
+            overflow: hidden;
+        }
+        .den-keo-quan {
+            width: 180px;
+            height: 250px;
+            position: relative;
+            transform-style: preserve-3d;
+            animation: quayVong 12s linear infinite;
+        }
+        .den-keo-quan:hover {
+            animation-play-state: paused;
+            cursor: pointer;
+        }
+        .mat-den {
+            position: absolute;
+            width: 180px;
+            height: 250px;
+            border: 2px solid #f1c40f;
+            background: rgba(255, 255, 255, 0.9);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 0 15px rgba(241, 196, 15, 0.3);
+        }
+        .mat-den img { width: 95%; height: 95%; object-fit: cover; }
+
+        .mat-1 { transform: rotateY(0deg) translateZ(200px); }
+        .mat-2 { transform: rotateY(60deg) translateZ(200px); }
+        .mat-3 { transform: rotateY(120deg) translateZ(200px); }
+        .mat-4 { transform: rotateY(180deg) translateZ(200px); }
+        .mat-5 { transform: rotateY(240deg) translateZ(200px); }
+        .mat-6 { transform: rotateY(300deg) translateZ(200px); }
+
+        @keyframes quayVong {
+            from { transform: rotateY(0deg); }
+            to { transform: rotateY(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html">Trang chủ</a>
+        <a href="den-keo-quan.html">Đèn Kéo Quân</a>
+    </nav>
+    <header>
+        <h1>Hiệu ứng Đèn Kéo Quân</h1>
+        <p>Rê chuột vào hình để dừng đèn lại</p>
+    </header>
+    <div class="container-3d">
+        <div class="den-keo-quan">
+            <div class="mat-den mat-1"><img src="https://picsum.photos/200/250?random=1"></div>
+            <div class="mat-den mat-2"><img src="https://picsum.photos/200/250?random=2"></div>
+            <div class="mat-den mat-3"><img src="https://picsum.photos/200/250?random=3"></div>
+            <div class="mat-den mat-4"><img src="https://picsum.photos/200/250?random=4"></div>
+            <div class="mat-den mat-5"><img src="https://picsum.photos/200/250?random=5"></div>
+            <div class="mat-den mat-6"><img src="https://picsum.photos/200/250?random=6"></div>
+        </div>
+    </div>
+</body>
+</html>
